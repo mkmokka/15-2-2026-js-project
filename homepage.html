@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>STUDY TIME </title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- ========== SECURITY HEADERS ========== -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="no-referrer">
+  <meta http-equiv="Permissions-Policy"
+        content="camera=(), microphone=(), geolocation=(), payment=()">
+
+  <!-- STRONG CSP -->
+  <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' https://www.gstatic.com;
+        style-src 'self';
+        img-src 'self' data:;
+        connect-src 'self'
+          https://*.firebaseio.com
+          https://www.googleapis.com
+          https://www.gstatic.com
+          https://identitytoolkit.googleapis.com
+          https://securetoken.googleapis.com;
+        frame-ancestors 'none';
+        object-src 'none';
+        base-uri 'none';
+      ">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Main JS -->
+  <script type="module" src="homepage.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to STUDY TIME</h1>
+  </header>
+
+  <!-- User Info Section -->
+  <section id="user-info">
+    <p>Logged in as: <span id="studentEmail">Loading...</span></p>
+    <button onclick="logout()">Logout</button>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    <h2>Dashboard</h2>
+    <p>This is your secure homepage content. Only logged-in users can see this.</p>
+
+    <!-- Example content that could be dynamic -->
+    <div id="dashboardContent">
+      <!-- Future data from Firebase can be loaded here securely -->
+    </div>
+  </main>
+</body>
+</html>

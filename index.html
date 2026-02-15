@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>STUDY TIME</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <!-- ========== SECURITY HEADERS ========== -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="Referrer-Policy" content="no-referrer">
+  <meta http-equiv="Permissions-Policy"
+        content="camera=(), microphone=(), geolocation=(), payment=()">
+
+  <!-- STRONG CSP (Firebase allowed, inline JS blocked) -->
+ <meta http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' https://www.gstatic.com;
+        style-src 'self';
+        img-src 'self' data:;
+        connect-src 'self'
+          https://*.firebaseio.com
+          https://www.googleapis.com
+          https://www.gstatic.com
+          https://identitytoolkit.googleapis.com
+          https://securetoken.googleapis.com;
+        frame-ancestors 'none';
+        object-src 'none';
+        base-uri 'none';
+      ">
+
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Main JS -->
+  <script type="module" src="main.js"></script>
+</head>
+
+<body>
+
+  <h1>STUDY TIME</h1>
+
+  <!-- AUTH SECTION -->
+  <div id="auth-section">
+
+    <input
+      type="email"
+      id="regEmail"
+      placeholder="Enter email to register"
+      autocomplete="email"
+      required
+    />
+
+    <button id="registerBtn">
+      Register with Email Link
+    </button>
+
+    <br /><br />
+
+    <input
+      type="email"
+      id="logEmail"
+      placeholder="Enter email to login"
+      autocomplete="email"
+      required
+    />
+
+    <input
+      type="password"
+      id="logPass"
+      placeholder="Enter password"
+      autocomplete="current-password"
+      required
+    />
+
+    <button id="loginBtn">
+      Login
+    </button>
+
+  </div>
+
+</body>
+</html>
+
+
+
